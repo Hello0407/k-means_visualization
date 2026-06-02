@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Визуализация алгоритма k-средних</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <section class="hero-plot-card">
+        <div class="canvas-header">
+          <div class="tag">Алгоритм k-средних</div>
+          <div id="legend" class="legend"></div>
+        </div>
+
+        <svg id="plot" viewBox="0 0 820 590"></svg>
+      </section>
+
+      <div class="control-card">
+        <h3>Панель управления</h3>
+
+        <label class="select-label">
+          Количество кластеров
+          <input id="kInput" type="number" min="1" step="1" value="2" />
+        </label>
+
+        <div class="buttons-grid">
+          <button id="autoPointsBtn" class="btn light wide-grid">
+            Поставить точки автоматически
+          </button>
+
+          <button id="backBtn" class="btn light" disabled>Шаг назад</button>
+          <button id="nextBtn" class="btn light">Следующий шаг</button>
+          <button id="playBtn" class="btn light">Авто-показ</button>
+
+          <button id="randomCentersBtn" class="btn ghost">Случайные центроиды</button>
+          <button id="clearCentersBtn" class="btn ghost">Очистить центроиды</button>
+
+          <button id="clearPointsBtn" class="btn ghost danger-button">Очистить точки</button>
+        </div>
+
+        <div class="mode-section">
+          <div class="mode-grid">
+            <button id="pointModeBtn" class="btn ghost mode-btn active">
+              Добавить точку
+            </button>
+
+            <button id="burstModeBtn" class="btn ghost mode-btn">
+              Добавить группу
+            </button>
+
+            <button id="centerModeBtn" class="btn ghost mode-btn">
+              Поставить центроид
+            </button>
+
+            <button id="eraseModeBtn" class="btn ghost mode-btn danger-mode">
+              Ластик
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
