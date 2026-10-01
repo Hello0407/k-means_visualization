@@ -65,6 +65,18 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <!-- Deferred scripts execute in dependency order and also support file://. -->
+  <script defer src="src/config.js"></script>
+  <script defer src="src/domain/kmeans.js"></script>
+  <script defer src="src/domain/data.js"></script>
+  <script defer src="src/domain/simulation.js"></script>
+  <script defer src="src/app/store.js"></script>
+  <script defer src="src/app/playback.js"></script>
+  <script defer src="src/view/coordinates.js"></script>
+  <script defer src="src/view/palette.js"></script>
+  <script defer src="src/view/plot.js"></script>
+  <script defer src="src/view/controls.js"></script>
+  <script defer src="src/app/controller.js"></script>
+  <script defer src="script.js"></script>
 </body>
 </html>
